@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+
     private SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
 
@@ -46,5 +47,18 @@ public class Player : MonoBehaviour
         }
 
         spriteRenderer.sprite = sprites[spritesIndex];
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("Collision Detected with " + collision.gameObject.name);
+            FindFirstObjectByType<GameManager>().GameOver();
+        }
+        else if (collision.gameObject.CompareTag("Scoring"))
+        {
+            FindFirstObjectByType<GameManager>().IncreaseScore();
+        }
     }
 }
