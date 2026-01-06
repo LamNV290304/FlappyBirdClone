@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Spawning : MonoBehaviour
 {
     public GameObject prefabToSpawn;
+
+    public Text scoreText;
 
     public float spawnRate = 1.0f;
     public float minHeight = -1.0f;
