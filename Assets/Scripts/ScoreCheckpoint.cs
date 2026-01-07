@@ -2,7 +2,7 @@ using UnityEngine;
 
 public enum ScoreCheckpoint
 {
-    ScoreCheck1 = 10,
-    ScoreCheck2 = 15,
-    ScoreCheck3 = 100
+    ScoreCheck1 = 100,
+    ScoreCheck2 = 5,
+    ScoreCheck3 = 10
 }
