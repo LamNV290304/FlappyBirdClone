@@ -4,7 +4,7 @@ public class Pipes : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
 
-    public float verticalSpeed = 2.0f; 
+    public float verticalSpeed = 1.0f; 
     public float verticalRange = 1.0f;
     private float randomOffset;
     public float maxTiltAngle = 15f;
