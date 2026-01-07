@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject playButton;
     public GameObject gameOverText;
 
-    private int score;
+    public int score;
 
     public void Awake()
     {
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
         player.enabled = true;
 
-        Pipes[] pipes = Object.FindObjectsByType<Pipes>(FindObjectsSortMode.None);
+        Pipes[] pipes = FindObjectsByType<Pipes>(FindObjectsSortMode.None);
 
         for (int i = 0; i < pipes.Length; i++)
         {
